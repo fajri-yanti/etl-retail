@@ -1,0 +1,19 @@
+[2024-12-12T10:26:45.831+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-12T10:26:45.851+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: summary_transaction.extract_task manual__2024-12-12T10:26:44.349976+00:00 [queued]>
+[2024-12-12T10:26:45.861+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: summary_transaction.extract_task manual__2024-12-12T10:26:44.349976+00:00 [queued]>
+[2024-12-12T10:26:45.862+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2024-12-12T10:26:45.876+0000] {taskinstance.py:2879} INFO - Executing <Task(PythonOperator): extract_task> on 2024-12-12 10:26:44.349976+00:00
+[2024-12-12T10:26:45.887+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=785) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-12T10:26:45.886+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'summary_transaction', 'extract_task', 'manual__2024-12-12T10:26:44.349976+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/summary_transaction.py', '--cfg-path', '/tmp/tmpd74x9123']
+[2024-12-12T10:26:45.889+0000] {standard_task_runner.py:72} INFO - Started process 787 to run task
+[2024-12-12T10:26:45.890+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask extract_task
+[2024-12-12T10:26:46.027+0000] {task_command.py:467} INFO - Running <TaskInstance: summary_transaction.extract_task manual__2024-12-12T10:26:44.349976+00:00 [running]> on host fd39b762d5e6
+[2024-12-12T10:26:46.147+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='summary_transaction' AIRFLOW_CTX_TASK_ID='extract_task' AIRFLOW_CTX_EXECUTION_DATE='2024-12-12T10:26:44.349976+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-12T10:26:44.349976+00:00'
+[2024-12-12T10:26:46.149+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-12T10:26:46.220+0000] {base.py:84} INFO - Retrieving connection 'dbmaster'
+[2024-12-12T10:26:55.911+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-12T10:26:55.922+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-12T10:26:55.923+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=summary_transaction, task_id=extract_task, run_id=manual__2024-12-12T10:26:44.349976+00:00, execution_date=20241212T102644, start_date=20241212T102645, end_date=20241212T102655
+[2024-12-12T10:26:55.991+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-12-12T10:26:56.025+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-12T10:26:56.032+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
